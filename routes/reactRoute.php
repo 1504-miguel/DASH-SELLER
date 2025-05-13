@@ -37,3 +37,17 @@ Route::get('/dashboard', function () {
 Route::get('/sellerpage', function () {
     return Inertia::render('SellerPage');
 });
+
+// seller products
+Route::get('/sellerproduct', function () {
+    return Inertia::render('SellerProducts');
+});
+
+// seller orders
+Route::get('/sellerorder', function () {
+    return Inertia::render('SellerOrders');
+});
+// seller register
+Route::get('/sellerlogin', function () {
+    return Inertia::render('SellerRegister');
+});

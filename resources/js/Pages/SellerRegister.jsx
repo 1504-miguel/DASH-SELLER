@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import Sellerdash from "../Components/Sellerdash"
+import Sellerlogin from "../Components/Sellerlogin"
 
-export default function SellerPage(){
+export default function SellerRegister(){
     // Validate component
     useEffect(() => {console.log("Rendering: SellerPage.jsx");}, []);
 
     return(
         <>
         {}
-        <Sellerdash/>
+        <Sellerlogin/>
         </>
     )
 

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import logo from "../../Assets/logo.png";
+import logo from "../Assets/logo.png";
 import { Link, useForm } from "@inertiajs/react";
 
 export default function Category() {
@@ -41,19 +41,30 @@ export default function Category() {
           {open && (
             <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg p-4 grid grid-cols-2 gap-4 z-50">
               <button
-                onClick={() => alert("Navigating to My Orders")}
                 className="flex flex-col items-center cursor-pointer focus:outline-none"
               >
-                <div className="bg-[#7a0d0d] text-white rounded-full p-3 text-xl">📋</div>
-                <span className="text-xs mt-1 text-center">My Orders</span>
+                <Link href="/sellerdash" className="flex flex-col items-center">
+                <div className="bg-[#7a0d0d] text-white rounded-full p-3 text-xl">🛍️</div>
+                <span className="text-xs mt-1 text-center">Seller View</span>
+                </Link>
               </button>
 
               <button
-                onClick={() => alert("Navigating to My Products")}
                 className="flex flex-col items-center cursor-pointer focus:outline-none"
               >
-                <div className="bg-[#796008] text-white rounded-full p-3 text-xl">🛍️</div>
+                <Link href="/sellerorder" className="flex flex-col items-center">
+                <div className="bg-[#1b6e0b] text-white rounded-full p-3 text-xl">📋</div>
+                <span className="text-xs mt-1 text-center">My Orders</span>
+                </Link>
+              </button>
+
+              <button
+                className="flex flex-col items-center cursor-pointer focus:outline-none"
+              >
+                <Link href="/sellerproduct" className="flex flex-col items-center">
+                <div className="bg-[#796008] text-white rounded-full p-3 text-xl">🏷️</div>
                 <span className="text-xs mt-1 text-center">My Products</span>
+                </Link>
               </button>
 
               <button
@@ -66,11 +77,12 @@ export default function Category() {
               </button>
 
               <button
-                onClick={() => alert("Logging out...")}
                 className="flex flex-col items-center cursor-pointer focus:outline-none"
               >
-                <div className="bg-gray-600 text-white rounded-full p-3 text-xl">↩️</div>
-                <span className="text-xs mt-1 text-center">Log Out</span>
+                <Link href="/sellerlogin" className="flex flex-col items-center">
+                  <div className="bg-gray-600 text-white rounded-full p-3 text-xl">↩️</div>
+                  <span className="text-xs mt-1 text-center">Log Out</span>
+                </Link>  
               </button>
             </div>
           )}

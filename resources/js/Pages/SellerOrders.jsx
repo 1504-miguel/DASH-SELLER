@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import Sellerdash from "../Components/Sellerdash"
+import Sellerorder from "../Components/Sellerorder"
+
 
 export default function SellerPage(){
     // Validate component
@@ -8,7 +9,7 @@ export default function SellerPage(){
     return(
         <>
         {}
-        <Sellerdash/>
+        <Sellerorder/>
         </>
     )
 

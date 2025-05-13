@@ -30,7 +30,9 @@ export default function Header(){
                             <Link href="/sellerpage">
                                 Seller View                     {/* Navigation link */}
                             </Link>
-                            <div>Start Selling</div>
+                            <Link href="/sellerlogin">
+                                Start Selling                     {/* Navigation link */}
+                            </Link>
                         </div>
                     </div>
 
